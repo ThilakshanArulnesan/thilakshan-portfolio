@@ -14,14 +14,17 @@ export default function Navbar(props) {
           <li>
             <Link to="/projects">Projects</Link>
           </li>
+
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+
           <li>
             <Link to="/blog">Blog</Link>
           </li>
+
           <li>
             <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/">About</Link>
           </li>
         </ul>
       </nav>

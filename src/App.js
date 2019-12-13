@@ -26,6 +26,10 @@ function App() {
               <ProjectPage />
             </Route>
 
+            <Route path="/about">
+              <About />
+            </Route>
+
             <Route path="/blog">
               <Blog />
             </Route>
@@ -34,8 +38,9 @@ function App() {
               <Contact />
             </Route>
 
+
             <Route path="/">
-              <About />
+              <ProjectPage />
             </Route>
 
           </Switch>
