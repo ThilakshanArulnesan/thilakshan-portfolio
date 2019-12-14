@@ -11,8 +11,10 @@ article {
 
   img {
     width: 10vw;
-    height: 10vh;
+    height: auto;
+    border-radius: 50%;
   }
+
   p {
     padding-left: 2em;
     width: 60%;
