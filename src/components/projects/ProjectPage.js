@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import ProjectCard from './ProjectCard';
 
 
-export default function ProjectPage({ descriptions, loading }) {
+export default function ProjectPage({ projects, loading }) {
 
+  let projectCards = projects.map(d => {
+    return (<li key={d.data.id}>
+      <ProjectCard info={d.data} />
+    </li>)
+  });
 
 
   // console.log(projects);
@@ -10,7 +16,7 @@ export default function ProjectPage({ descriptions, loading }) {
     <>
       <h1>Projects</h1>
       {!loading &&
-        <p>{descriptions}</p>}
+        <ul>{projectCards}</ul>}
     </>
   )
 };

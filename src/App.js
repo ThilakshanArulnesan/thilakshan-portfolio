@@ -4,7 +4,7 @@ import ProjectPage from './components/projects/ProjectPage.js';
 import Blog from './components/blog/Blog.js';
 import Navbar from './components/navigation/Navbar';
 import Contact from './components/contact/Contact.js';
-import projects from './components/projects/projects.json';
+import projectInfo from './components/projects/projects.json';
 import axios from 'axios'
 
 import './App.css';
@@ -15,17 +15,15 @@ import {
 } from "react-router-dom";
 
 
-
-
 function App() {
   const [loading, setLoading] = useState(true);
-  const [descriptions, setDescriptions] = useState([]);
+  const [projects, setProjects] = useState([]);
 
-  //Get project descriptions dynamically
+  //Get project projects dynamically
   useEffect(() => {
-    let user = projects.username;
+    let user = projectInfo.username;
 
-    let urls = projects.projects.map(name =>
+    let urls = projectInfo.projects.map(name =>
       `https://api.github.com/repos/${user}/${name}`
     );
     let promiseArray = [];
@@ -34,9 +32,7 @@ function App() {
 
     Promise.all(promiseArray).then(data => {
       console.log(data);
-      setDescriptions(data.map(d => {
-        return (<li key={d.data.id}> {d.data.description}</li>)
-      }));
+      setProjects(data);
       setLoading(false);
     });
 
@@ -64,14 +60,14 @@ function App() {
 
             <Route path="/projects">
               <ProjectPage
-                descriptions={descriptions}
+                projects={projects}
                 loading={loading}
               />
             </Route>
 
             <Route path="/">
               <ProjectPage
-                descriptions={descriptions}
+                projects={projects}
                 loading={loading}
               />
             </Route>
