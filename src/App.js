@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import About from './components/about/About.js';
 import ProjectPage from './components/projects/ProjectPage.js';
 import Blog from './components/blog/Blog.js';
 import Navbar from './components/navigation/Navbar';
 import Contact from './components/contact/Contact.js';
+import projects from './components/projects/projects.json';
+import axios from 'axios'
 
 import './App.css';
 import {
@@ -13,7 +15,33 @@ import {
 } from "react-router-dom";
 
 
+
+
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [descriptions, setDescriptions] = useState([]);
+
+  //Get project descriptions dynamically
+  useEffect(() => {
+    let user = projects.username;
+
+    let urls = projects.projects.map(name =>
+      `https://api.github.com/repos/${user}/${name}`
+    );
+    let promiseArray = [];
+
+    urls.forEach(url => promiseArray.push(axios.get(url)));
+
+    Promise.all(promiseArray).then(data => {
+      console.log(data);
+      setDescriptions(data.map(d => {
+        return (<li key={d.data.id}> {d.data.description}</li>)
+      }));
+      setLoading(false);
+    });
+
+  }, []);
+
   return (
     <>
       <Router>
@@ -21,10 +49,6 @@ function App() {
         <Navbar />
         <>
           <Switch>
-
-            <Route path="/projects">
-              <ProjectPage />
-            </Route>
 
             <Route path="/about">
               <About />
@@ -38,9 +62,18 @@ function App() {
               <Contact />
             </Route>
 
+            <Route path="/projects">
+              <ProjectPage
+                descriptions={descriptions}
+                loading={loading}
+              />
+            </Route>
 
             <Route path="/">
-              <ProjectPage />
+              <ProjectPage
+                descriptions={descriptions}
+                loading={loading}
+              />
             </Route>
 
           </Switch>
