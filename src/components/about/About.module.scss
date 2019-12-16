@@ -1,20 +1,17 @@
-article {
+.about {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
-
   h2 {
     width: 60%;
   }
-
   img {
     width: 10vw;
     height: auto;
     border-radius: 50%;
   }
-
   p {
     padding-left: 2em;
     width: 60%;
