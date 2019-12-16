@@ -15,7 +15,7 @@ export default function BlogPage(props) {
           setBlogs([]);
         } else {
           console.log(res.data.items);
-          setBlogs(res.data.items);
+          setBlogs(res.data.items.reverse());
         }
       });
   }, []);

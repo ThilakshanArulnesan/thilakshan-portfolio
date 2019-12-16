@@ -5,18 +5,23 @@
   margin: auto;
   width: 75vw;
   height: auto;
-  // :first-child {
-  //   align-self: center;
-  //   font-size: 1.5em;
-  // }
-  img {
-    width: 40vw;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 40vw;
+      margin: auto;
+      padding-bottom: 1em;
+    }
+    figcaption {
+      text-align: center;
+    }
   }
-  figcaption {
-    text-align: center;
-  }
+
   h3 {
     align-self: flex-start;
+    font-size: 1.5em;
   }
   p {
     align-self: flex-start;
@@ -25,7 +30,12 @@
     display: none;
   }
 }
-
+.title {
+  text-align: center;
+}
+.info {
+  margin-left: 1em;
+}
 // article:last-child {
 //   display: none;
 // }
