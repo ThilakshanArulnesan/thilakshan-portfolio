@@ -11,17 +11,17 @@ export default function Blog(props) {
       { params: { rss_url: 'https://medium.com/feed/@t.arulnes' } })
       .then((res) => {
         if (res.status !== 200) {
-
+          setBlogs([]);
         } else {
-          console.log(res.data);
-          setBlogs(res.data.feed);
+          console.log(res.data.items);
+          setBlogs(res.data.items);
         }
       });
   }, []);
 
   return (
     <>
-      <h1>Blog</h1>
+      {blogs && <h1>Blog</h1>}
     </>
   )
 };

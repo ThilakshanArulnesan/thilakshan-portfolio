@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import About from './components/about/About.js';
 import ProjectPage from './components/projects/ProjectPage.js';
-import Blog from './components/blog/Blog.js';
+import BlogPage from './components/blog/BlogPage.js';
 import Navbar from './components/navigation/Navbar';
 import Contact from './components/contact/Contact.js';
 import projectInfo from './components/projects/projects.json';
@@ -51,7 +51,7 @@ function App() {
             </Route>
 
             <Route path="/blog">
-              <Blog />
+              <BlogPage />
             </Route>
 
             <Route path="/contact">
