@@ -5,7 +5,7 @@ import Blog from './components/blog/Blog.js';
 import Navbar from './components/navigation/Navbar';
 import Contact from './components/contact/Contact.js';
 import projectInfo from './components/projects/projects.json';
-import axios from 'axios'
+import axios from 'axios';
 
 import './App.css';
 import {
