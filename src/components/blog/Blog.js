@@ -1,11 +1,12 @@
 import React from 'react';
-import './Blog.scss';
+import styles from './Blog.module.scss';
 
 export default function Blog(props) {
 
   return (
     <>
-      <article dangerouslySetInnerHTML={{ __html: props.content }} />
+      <h1>{props.title}</h1>
+      <article className={styles.blog} dangerouslySetInnerHTML={{ __html: props.content }} />
     </>
   )
 };
