@@ -1,34 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Link
 } from "react-router-dom";
 import style from './Navbar.module.scss'
-import classNames from 'classnames'
 
 export default function Navbar(props) {
+  const [selected, setSelected] = useState('about');
 
-  // className
-
-  // props.sections.map()
   return (
     <>
       <nav className={style.siteNav}>
         <ul>
-          <li>
-            <Link to="/about">Thilakshan Arulnesan</Link>
+          <li className={selected === 'about' ? style.liSelected : ''} >
+            <Link onClick={() => setSelected('about')} to="/about">Thilakshan Arulnesan</Link>
           </li>
 
-          <li>
-            <Link to="/projects">Projects</Link>
+          <li className={selected === 'projects' ? style.liSelected : ''} >
+            <Link onClick={() => setSelected('projects')} to="/projects">Projects</Link>
           </li>
 
-
-
-          <li>
+          <li className={selected === 'blog' ? style.liSelected : ''} onClick={() => setSelected('blog')}>
             <Link to="/blog">Blog</Link>
           </li>
 
-          <li>
+          <li className={selected === 'contact' ? style.liSelected : ''} onClick={() => setSelected('contact')}>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>

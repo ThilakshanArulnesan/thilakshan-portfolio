@@ -23,11 +23,8 @@
   a {
     text-decoration: none;
   }
-  a:active {
-    background-color: yellow;
-  }
 
-  .a-selected {
-    background-color: yellow;
+  .liSelected a {
+    color: lavender;
   }
 }
