@@ -18,6 +18,7 @@ import {
 function App() {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
+  const [blogData, setBlogs] = useState([]);
 
   //Get project projects dynamically
   useEffect(() => {
@@ -38,6 +39,21 @@ function App() {
 
   }, []);
 
+  useEffect(() => {
+
+    axios.get('https://api.rss2json.com/v1/api.json',
+      { params: { rss_url: 'https://medium.com/feed/@t.arulnes' } })
+      .then((res) => {
+        if (res.status !== 200) {
+          setBlogs([]);
+        } else {
+          console.log(res.data.items);
+          setBlogs(res.data.items.reverse());
+        }
+      });
+  }, []);
+
+
   return (
     <>
       <Router>
@@ -51,7 +67,7 @@ function App() {
             </Route>
 
             <Route path="/blog">
-              <BlogPage />
+              <BlogPage blogData={blogData} />
             </Route>
 
             <Route path="/contact">
