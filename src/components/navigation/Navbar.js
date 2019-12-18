@@ -19,12 +19,12 @@ export default function Navbar(props) {
             <Link onClick={() => setSelected('projects')} to="/projects">Projects</Link>
           </li>
 
-          <li className={selected === 'blog' ? style.liSelected : ''} onClick={() => setSelected('blog')}>
-            <Link to="/blog">Blog</Link>
+          <li className={selected === 'blog' ? style.liSelected : ''} >
+            <Link onClick={() => setSelected('blog')} to="/blog">Blog</Link>
           </li>
 
-          <li className={selected === 'contact' ? style.liSelected : ''} onClick={() => setSelected('contact')}>
-            <Link to="/contact">Contact</Link>
+          <li className={selected === 'contact' ? style.liSelected : ''} >
+            <Link onClick={() => setSelected('contact')} to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
