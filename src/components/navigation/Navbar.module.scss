@@ -3,12 +3,22 @@
 .siteNav {
   background-color: $color2;
   ul {
+    font-family: Montserrat, "helvetica neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+
     margin-top: 0;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0.75em 1em 0.75em 1em;
     list-style-type: none;
+  }
+  li:first-child {
+    font-family: "Girassol", cursive;
+    letter-spacing: 0.2em;
+    font-size: 1.2em;
+    flex-grow: 0.2;
   }
   a {
     text-decoration: none;

@@ -15,12 +15,14 @@ export default function Navbar(props) {
       <nav className={style.siteNav}>
         <ul>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/about">Thilakshan Arulnesan</Link>
           </li>
 
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
           </li>
+
+
 
           <li>
             <Link to="/blog">Blog</Link>
