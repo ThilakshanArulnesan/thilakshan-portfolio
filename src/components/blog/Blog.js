@@ -11,6 +11,8 @@ export default function Blog(props) {
         </p>
       </em>
       <article className={styles.blog} dangerouslySetInnerHTML={{ __html: props.content }} />
+
+      <hr className={styles.fade} />
     </>
   )
 };
