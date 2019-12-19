@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import styles from './Project.module.scss'
 
 
 export default function ProjectPage({ projects, loading }) {
@@ -14,7 +15,7 @@ export default function ProjectPage({ projects, loading }) {
   // console.log(projects);
   return (
     <>
-      <h1>Projects</h1>
+      <h1 className={styles.projectTitle}>Projects</h1>
       {!loading &&
         <ul>{projectCards}</ul>}
     </>

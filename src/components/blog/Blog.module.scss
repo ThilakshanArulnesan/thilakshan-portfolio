@@ -1,3 +1,4 @@
+@import "../../theme/common";
 .blog {
   display: flex;
   flex-direction: column;
@@ -32,23 +33,10 @@
 }
 .title {
   text-align: center;
+  text-transform: uppercase;
 }
 .info {
   margin-left: 1em;
-}
-
-.fade {
-  border: 0;
-  margin: 1.35em auto;
-  max-width: 100%;
-  background-position: 50%;
-  box-sizing: border-box;
-
-  height: 1px;
-  width: 70%;
-  $color: gray;
-  color: $color;
-  background-image: linear-gradient(90deg, rgba($color, 0), rgba($color, 1) 50%, rgba($color, 0) 100%);
 }
 
 // article:last-child {
