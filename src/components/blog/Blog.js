@@ -7,7 +7,7 @@ export default function Blog(props) {
     <>
       <h1 className={styles.title}>{props.title}</h1>
       <em>
-        <p className={styles.info}>{`Published ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`}. Link to original blog <a href={props.link}>here</a>.
+        <p className={styles.info}>{`Published ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`}. Link to original blog <a href={props.link} target="_blank" rel="noopener noreferrer">here</a>.
         </p>
       </em>
       <article className={styles.blog} dangerouslySetInnerHTML={{ __html: props.content }} />
