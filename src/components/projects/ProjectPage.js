@@ -17,7 +17,7 @@ export default function ProjectPage({ projects, loading }) {
     <>
       <h1 className={styles.projectTitle}>Projects</h1>
       {!loading &&
-        <ul>{projectCards}</ul>}
+        <ul className={styles.projectList}>{projectCards}</ul>}
     </>
   )
 };
