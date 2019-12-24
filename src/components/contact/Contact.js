@@ -1,8 +1,6 @@
 import React from 'react';
 
-import git from './GitHub-Mark-120px-plus.png';
-import linkedInImage from './linkedIn.png';
-import './Contact.scss';
+import styles from './Contact.module.scss';
 
 export default function Contact(props) {
 
@@ -21,14 +19,11 @@ export default function Contact(props) {
 
   return (
     <>
-      <ul>
-        <li><a href={'https://github.com/ThilakshanArulnesan'}> <img src={git} alt='Github logo' /> /ThilakshanArulnesan </a></li>
-
-        <li><a href={'https://www.linkedin.com/in/thilakshan/'}><img src={linkedInImage} alt='LinkedIn logo' />/Thilakshan </a> </li>
-      </ul>
-      <form action="https://script.google.com/macros/s/AKfycbyNO_a31lFY60ua8vx141fZTExCQ1BlqVxLBBtBCg/exec" method="post" encType='multipart/form-data'
+      <h1 className={styles.contactTitle}>Contact</h1>
+      <form className={styles.form} action="https://script.google.com/macros/s/AKfycbyNO_a31lFY60ua8vx141fZTExCQ1BlqVxLBBtBCg/exec" method="post" encType='multipart/form-data'
         name='EmailTestForm'
         onSubmit={(e) => handleSubmit(e)}>
+        <p className={styles.text}>Please fill out the form below to get in contact with me!</p>
         Name
         <input type='text' size='24' name='name' />
         E-mail
@@ -36,7 +31,7 @@ export default function Contact(props) {
         Message:
         <textarea name='message' rows='4' cols='20'>
         </textarea>
-        <input type='submit' value='Submit' />
+        <input className={styles.button} type='submit' value='Submit' />
       </form>
     </>
   )
