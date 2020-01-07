@@ -9,35 +9,28 @@ export default function ProjectCard({ info, altdesc, image }) {
     <>
       {image && <img src={image} alt={altdesc}></img>}
       <p className={styles.projectName}>{info.name}</p>
-      <Carousel transitionTime={1000}>
+      <Carousel
+        transitionTime={500}
+        showStatus={false}
+        showThumbs={false} >
         <div>
-          <img src="./project_data/battleShip.png" alt='battleship' />
-          <p className="legend">
-          </p>
+          <img src="./project_images/battleShip.png" alt='battleship' />
+
         </div>
         <div>
           <img src="/assets/2.jpeg" />
-          <p className="legend">
 
-          </p>
         </div>
         <div>
           <img src="/assets/3.jpeg" />
-          <p className="legend">
 
-          </p>
         </div>
         <div>
           <img src="/assets/4.jpeg" />
-          <p className="legend">
 
-          </p>
         </div>
         <div>
           <img src="/assets/5.jpeg" />
-          <p className="legend">
-
-          </p>
         </div>
       </Carousel>
 
