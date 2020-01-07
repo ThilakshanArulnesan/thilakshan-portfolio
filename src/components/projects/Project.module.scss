@@ -1,17 +1,22 @@
 @import "../../theme/common";
 
 .projectTitle {
-  color: yellow;
   text-align: center;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .projectList {
   list-style-type: none;
-}
+  padding: 0;
 
-.projectName {
-  text-align: center;
-
-  text-transform: uppercase;
+  p {
+    padding-left: 2em;
+  }
+  .projectName {
+    padding-left: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }

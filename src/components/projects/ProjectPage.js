@@ -15,7 +15,7 @@ export default function ProjectPage({ projects, loading }) {
   // console.log(projects);
   return (
     <>
-      <h1 className={styles.projectTitle}>Projects</h1>
+      <h1 className={styles.projectTitle}> Projects </h1>
       {!loading &&
         <ul className={styles.projectList}>{projectCards}</ul>}
     </>
