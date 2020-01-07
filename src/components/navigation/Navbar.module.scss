@@ -1,12 +1,10 @@
 @import "../../theme/variables.scss";
+.shortText {
+  display: none;
+}
 
 .siteNav {
-  .shortText {
-    display: none;
-  }
-
   ul {
-    width: 100%;
     background-color: #bbc2e2;
     font-family: Montserrat, "helvetica neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -33,13 +31,15 @@
   .liSelected a {
     color: lavender;
   }
-
-  @media (max-width: 1200px) {
-    .shortText {
-      display: inline-block;
-    }
-    .fullText {
-      display: none;
-    }
+  @media (max-width: 700px) {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 700px) {
+  .shortText {
+    display: inline-block;
+  }
+  .fullText {
+    display: none;
   }
 }
