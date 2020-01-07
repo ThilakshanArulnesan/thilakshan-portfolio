@@ -22,8 +22,6 @@ export default function About(props) {
         <p>I am a McMaster University Integrated Science Physics concentration graduate with experience in teaching. I love working on puzzles and trying to tackle problems using any tools available to me.
         </p>
         <h2>Skills</h2>
-
-
       </article>
     </>
   )

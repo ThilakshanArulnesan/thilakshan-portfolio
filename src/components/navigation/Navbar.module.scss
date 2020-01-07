@@ -1,14 +1,17 @@
 @import "../../theme/variables.scss";
 
 .siteNav {
+  .shortText {
+    display: none;
+  }
+
   ul {
+    width: 100%;
     background-color: #bbc2e2;
     font-family: Montserrat, "helvetica neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 500;
-
     margin-top: 0;
-
     display: flex;
     justify-content: space-between;
     padding: 0.75em 1em 0.75em 1em;
@@ -20,11 +23,23 @@
     font-size: 1.2em;
     flex-grow: 0.2;
   }
+  li {
+    padding: 1em;
+  }
   a {
     text-decoration: none;
   }
 
   .liSelected a {
     color: lavender;
+  }
+
+  @media (max-width: 1200px) {
+    .shortText {
+      display: inline-block;
+    }
+    .fullText {
+      display: none;
+    }
   }
 }
