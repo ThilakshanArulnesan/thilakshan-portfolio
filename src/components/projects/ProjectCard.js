@@ -24,7 +24,9 @@ export default function ProjectCard({ info, altdesc, image, numImages }) {
       {image && <img src={image} alt={altdesc}></img>}
       <p className={styles.projectName}>{info.name}</p>
       <Carousel
-        transitionTime={500}
+        autoPlay
+        interval={5000}
+        infiniteLoop
         showStatus={false}
         showThumbs={false} >
         {images && images}
