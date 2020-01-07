@@ -4,7 +4,7 @@ import ProjectPage from './components/projects/ProjectPage.js';
 import BlogPage from './components/blog/BlogPage.js';
 import Navbar from './components/navigation/Navbar';
 import Contact from './components/contact/Contact.js';
-import projectInfo from './components/projects/project_data/projects.json';
+import projectInfo from './components/projects/projects.json';
 import axios from 'axios';
 
 import './App.css';
