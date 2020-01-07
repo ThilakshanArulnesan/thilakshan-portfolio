@@ -78,6 +78,8 @@ function App() {
               <ProjectPage
                 projects={projects}
                 loading={loading}
+                numImages={projectInfo.numImages}
+
               />
             </Route>
 
@@ -85,6 +87,7 @@ function App() {
               <ProjectPage
                 projects={projects}
                 loading={loading}
+                numImages={projectInfo.numImages}
               />
             </Route>
 

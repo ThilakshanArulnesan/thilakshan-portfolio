@@ -3,11 +3,11 @@ import ProjectCard from './ProjectCard';
 import styles from './Project.module.scss'
 
 
-export default function ProjectPage({ projects, loading }) {
+export default function ProjectPage({ projects, loading, numImages }) {
 
-  let projectCards = projects.map(d => {
+  let projectCards = projects.map((d, i) => {
     return (<li key={d.data.id}>
-      <ProjectCard info={d.data} />
+      <ProjectCard info={d.data} numImages={numImages[i]} />
     </li>)
   });
 

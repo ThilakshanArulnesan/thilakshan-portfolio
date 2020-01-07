@@ -4,7 +4,21 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
-export default function ProjectCard({ info, altdesc, image }) {
+export default function ProjectCard({ info, altdesc, image, numImages }) {
+  let images = [];
+  // console.log(numImages);
+
+  for (let i = 0; i < numImages; i++) {
+    // console.log(numImages);
+    images[i] = (
+      <div key={i}>
+        <img src={`./project_images/${info.name}${i}.png`} alt={`${info.name} demo`} />
+      </div>
+    )
+  }
+  console.log(images);
+
+
   return (
     <>
       {image && <img src={image} alt={altdesc}></img>}
@@ -13,25 +27,7 @@ export default function ProjectCard({ info, altdesc, image }) {
         transitionTime={500}
         showStatus={false}
         showThumbs={false} >
-        <div>
-          <img src="./project_images/battleShip.png" alt='battleship' />
-
-        </div>
-        <div>
-          <img src="/assets/2.jpeg" />
-
-        </div>
-        <div>
-          <img src="/assets/3.jpeg" />
-
-        </div>
-        <div>
-          <img src="/assets/4.jpeg" />
-
-        </div>
-        <div>
-          <img src="/assets/5.jpeg" />
-        </div>
+        {images && images}
       </Carousel>
 
       {info.homepage && (<p>Site: <a href={info.homepage} target="_blank" rel="noopener noreferrer"> {info.homepage}</a></p>)}

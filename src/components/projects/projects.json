@@ -4,5 +4,10 @@
     "theDrawingBoard",
     "grandfathersCoffeeTable",
     "battleShip"
+  ],
+  "numImages": [
+    2,
+    1,
+    1
   ]
 }
