@@ -6,7 +6,8 @@
   margin: auto;
   padding: 0, 2em, 0, 0;
   p,
-  h2 {
+  h2,
+  .skills {
     width: 90%;
   }
   h1 {
@@ -27,21 +28,18 @@
     }
   }
   .skills {
-    align-self: flex-start;
-
+    align-self: center;
     list-style-image: url("./correct.png");
+
     li {
-      display: list-item;
-      margin: 0 1em 0 1em;
+      display: inline-block;
+      text-align: center;
+      width: 25%;
+      padding: 1em 0em 1em 0em;
     }
   }
   .logo {
     width: 1em;
     height: auto;
   }
-}
-.footer {
-  font-size: x-small;
-  right: 0;
-  bottom: 0;
 }

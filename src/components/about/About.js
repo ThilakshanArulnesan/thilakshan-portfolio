@@ -3,6 +3,7 @@ import image from '../../me.jpg';
 import styles from './About.module.scss';
 
 import git from './GitHub-Mark-120px-plus.png';
+import check from './correct.png';
 import linkedInImage from './linkedIn.png';
 
 export default function About(props) {
@@ -20,17 +21,15 @@ export default function About(props) {
         <p>I am a McMaster University Integrated Science Physics concentration graduate with experience in teaching. I love working on puzzles and trying to tackle problems using any tools available to me.</p>
         <h2>Skills</h2>
         <ul className={styles.skills}>
-          <li>React</li>
-          <li>Node</li>
-          <li>Javascript</li>
-          <li>HTML/CSS</li>
-          <li>Java</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> React</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Node</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Javascript</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> HTML/CSS</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Java</li>
         </ul>
 
       </article>
-      <footer className={styles.footer}>
-        Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-      </footer>
+
     </>
   )
 };
