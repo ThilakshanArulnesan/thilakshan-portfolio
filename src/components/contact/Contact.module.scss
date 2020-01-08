@@ -14,6 +14,9 @@
   *:focus {
     outline-width: 0;
   }
+  input {
+    padding: 10px 0em 10px 10px;
+  }
 }
 .button {
   background-color: $color2;
