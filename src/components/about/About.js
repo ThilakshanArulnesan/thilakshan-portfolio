@@ -22,10 +22,15 @@ export default function About(props) {
         <h2>Skills</h2>
         <ul className={styles.skills}>
           <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> React</li>
-          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Node</li>
-          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Javascript</li>
           <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> HTML/CSS</li>
           <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Java</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Node</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Javascript</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Postgres</li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Git </li>
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Rails </li>
+          {/* <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Websockets </li> */}
+          <li><img className={styles.logo} src={check} alt='LinkedIn logo' /> Mocha/Chai </li>
         </ul>
 
       </article>

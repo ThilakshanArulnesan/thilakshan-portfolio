@@ -14,7 +14,8 @@
   *:focus {
     outline-width: 0;
   }
-  input {
+  input,
+  textarea {
     padding: 10px 0em 10px 10px;
   }
 }
