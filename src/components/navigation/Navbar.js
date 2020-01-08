@@ -5,7 +5,7 @@ import {
 import style from './Navbar.module.scss'
 
 export default function Navbar(props) {
-  const [selected, setSelected] = useState('about');
+  const [selected, setSelected] = useState('projects');
 
   return (
     <>
