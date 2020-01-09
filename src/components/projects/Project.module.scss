@@ -19,4 +19,14 @@
     text-transform: uppercase;
     font-weight: 700;
   }
+
+  .carouselContainer {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    // max-height: 600px;
+    height: 600px;
+    margin: auto;
+    overflow: scroll;
+  }
 }
