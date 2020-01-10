@@ -32,7 +32,7 @@ function App() {
     urls.forEach(url => promiseArray.push(axios.get(url)));
 
     Promise.all(promiseArray).then(data => {
-      console.log(data);
+
       setProjects(data);
       setLoading(false);
     });
@@ -47,7 +47,7 @@ function App() {
         if (res.status !== 200) {
           setBlogs([]);
         } else {
-          console.log(res.data.items);
+
           setBlogs(res.data.items.reverse());
         }
       });

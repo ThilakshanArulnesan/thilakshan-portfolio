@@ -12,7 +12,6 @@ export default function ProjectPage({ projects, loading, numImages }) {
   });
 
 
-  // console.log(projects);
   return (
     <>
       <h1 className={styles.projectTitle}> Projects </h1>

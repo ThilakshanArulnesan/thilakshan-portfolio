@@ -6,10 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function ProjectCard({ info, altdesc, image, numImages }) {
   let images = [];
-  // console.log(numImages);
 
   for (let i = 0; i < numImages; i++) {
-    console.log(numImages);
+
     images[i] = (
       <div key={i} >
         <img className={`${styles.screenshots}`}
@@ -17,7 +16,7 @@ export default function ProjectCard({ info, altdesc, image, numImages }) {
       </div>
     )
   }
-  console.log(images);
+
 
 
   return (

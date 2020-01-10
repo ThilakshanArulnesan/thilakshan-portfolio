@@ -7,7 +7,7 @@ export default function Contact(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(e.target);
+
     const data = new FormData(e.target);
 
     fetch('https://script.google.com/macros/s/AKfycbyNO_a31lFY60ua8vx141fZTExCQ1BlqVxLBBtBCg/exec', {
