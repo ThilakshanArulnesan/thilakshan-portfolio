@@ -1,9 +1,15 @@
 @import "../../theme/variables.scss";
 .shortText {
+  display: inline-block;
+}
+.fullText {
   display: none;
 }
 
 .siteNav {
+  width: 100%;
+  font-size: 0.8em;
+
   ul {
     background-color: #bbc2e2;
     font-family: Montserrat, "helvetica neue", Helvetica, Arial, sans-serif;
@@ -13,7 +19,7 @@
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0.75em 1em 0.75em 1em;
+    padding: 0em 0em 0em 0em;
     list-style-type: none;
   }
   li:first-child {
@@ -32,15 +38,19 @@
   .liSelected a {
     color: lavender;
   }
-  @media (max-width: 700px) {
-    font-size: 0.8em;
-  }
 }
-@media (max-width: 700px) {
+//Smaller devices
+@media (min-width: 700px) {
+  .siteNav {
+    font-size: 1em;
+    ul {
+      padding: 0.75em 1em 0.75em 1em;
+    }
+  }
   .shortText {
-    display: inline-block;
+    display: none;
   }
   .fullText {
-    display: none;
+    display: inline-block;
   }
 }
