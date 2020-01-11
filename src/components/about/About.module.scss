@@ -1,17 +1,16 @@
 .about {
   display: flex;
   flex-flow: column;
-  justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 0, 2em, 0, 0;
+  // padding: 0, 2em, 0, 0;
   p,
   h2,
   .skills {
-    width: 90%;
+    width: 95%;
   }
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
   }
   img {
@@ -19,7 +18,7 @@
     height: auto;
     border-radius: 50%;
   }
-  ul {
+  .links {
     list-style-type: none;
     padding: 0em;
     li {
@@ -29,16 +28,29 @@
   }
   .skills {
     align-self: center;
-    list-style-image: url("./correct.png");
 
     li {
       display: inline-block;
-      width: 29%;
+      width: 45%;
       padding: 1em 0em 1em 0em;
     }
   }
   .logo {
     width: 1em;
     height: auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .about {
+    p,
+    h2,
+    .skills {
+      width: 65%;
+    }
+    .skills li {
+      width: 29%;
+      // margin: 0 1em 0 1em;
+    }
   }
 }

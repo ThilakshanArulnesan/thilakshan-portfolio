@@ -19,18 +19,16 @@
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
-    padding: 0em 0em 0em 0em;
+    padding: 1em 0.5em 1em 0.5em;
     list-style-type: none;
   }
   li:first-child {
     font-family: "Girassol", cursive;
     letter-spacing: 0.2em;
-    font-size: 1.2em;
+    font-size: 1.5em;
     flex-grow: 0.2;
   }
-  li {
-    padding: 1em;
-  }
+
   a {
     text-decoration: none;
   }
