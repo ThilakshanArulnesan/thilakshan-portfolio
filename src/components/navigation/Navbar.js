@@ -4,8 +4,9 @@ import {
 } from "react-router-dom";
 import style from './Navbar.module.scss'
 
-export default function Navbar(props) {
-  const [selected, setSelected] = useState('projects');
+export default function Navbar() {
+
+  const [selected, setSelected] = useState(window.location.pathname.split('/')[1]);
 
   return (
     <>
