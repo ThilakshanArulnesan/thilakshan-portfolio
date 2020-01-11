@@ -6,6 +6,7 @@
   margin: auto;
   width: 75vw;
   height: auto;
+  overflow: hidden;
 
   figure {
     display: flex;
@@ -24,7 +25,8 @@
     align-self: flex-start;
     font-size: 1.5em;
   }
-  p {
+  p,
+  a {
     align-self: flex-start;
   }
   img:last-child {

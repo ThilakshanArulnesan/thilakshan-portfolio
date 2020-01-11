@@ -4,7 +4,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 90vw;
   * {
     margin: 1em;
     font-size: 1em;
@@ -30,4 +30,10 @@
 }
 .text {
   text-align: center;
+}
+
+@media (min-width: 700px) {
+  .form {
+    width: 50vw;
+  }
 }
