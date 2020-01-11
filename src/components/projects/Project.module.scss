@@ -12,6 +12,9 @@
 
   p {
     padding-left: 2em;
+    overflow-wrap: break-word;
+    font-size: 0.75em;
+    width: 90%;
   }
   .projectName {
     padding-left: 0em;
@@ -31,6 +34,9 @@
   }
 }
 @media (min-width: 700px) {
+  .projectList p {
+    font-size: 1em;
+  }
   .carouselContainer {
     width: 60%;
     height: 600px;
